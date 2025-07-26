@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>🎁 Mở Hộp Quà </title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      padding-top: 80px;
+    }
+    h1 {
+      color: #d63384;
+    }
+    #gift {
+      font-size: 60px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    #gift:hover {
+      transform: scale(1.2);
+    }
+    #message, #buttons {
+      display: none;
+      margin-top: 30px;
+    }
+    button {
+      font-size: 20px;
+      margin: 10px;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .yes {
+      background-color: #28a745;
+      color: white;
+    }
+    .yes:hover {
+      background-color: #218838;
+    }
+    .no {
+      background-color: #dc3545;
+      color: white;
+    }
+    .no:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎁 Nhấn vào hộp quà !</h1>
+  <div id="gift" onclick="moQua()">🎁</div>
+
+  <div id="message">
+    <h2>💌 Em có làm người yêu anh không? 💘</h2>
+  </div>
+
+  <div id="buttons">
+    <button class="yes" onclick="alert('Yêu anh nhé! Anh sẽ luôn bên em 😘')">✅ Có</button>
+    <button class="no" onclick="alert('😢 Không sao... Anh sẽ chờ em.')">❌ Không</button>
+  </div>
+
+  <script>
+    function moQua() {
+      document.getElementById("gift").innerText = "🎊 BÙMMM!";
+      setTimeout(() => {
+        document.getElementById("message").style.display = "block";
+        document.getElementById("buttons").style.display = "block";
+        document.querySelector("h1").style.display = "none";
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>
